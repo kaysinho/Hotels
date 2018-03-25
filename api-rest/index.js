@@ -45,7 +45,7 @@ app.get('/api/hotels/:name', cors(corsOptions), (request, response)=>{
     let name = request.params.name.toUpperCase()
     let hotels = app.locals.hotels.filter(hotel => hotel.name.toUpperCase().indexOf(name)>0)
     resp.params = request.params
-    console.log(hotels)
+    
     if (hotels.length==0){
         resp.status = 'error'
         resp.message ='Hotel not exist!'
