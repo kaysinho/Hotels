@@ -1,6 +1,8 @@
 # Hotels
 Este proyecto se compone de dos partes: La primera es un backend hecho en node.js donde se expone un APIRest de hoteles, para ser consumida desde cualquier otra aplicacion. La segunda parte es una app desarrollada en Angular 5, donde se consume el API desarrollada en el punto anterior.
 
+https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
+
 # Instalaciones necesarias
 1. Si no tiene instalado en su equipo Node, por favor descargar la version mas estable del siguiente link https://nodejs.org/es/
 2. Si no tiene instalado en su equipo angular/cli, por favor abrir una consola y ejecutar el comando npm install -g @angular/cli tal como se explica en la pagina principal del fabricante https://cli.angular.io/
