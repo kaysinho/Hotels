@@ -13,6 +13,7 @@
 .stars{
     color: #DF7401;
     padding-left: 15px;
+
 }
 
 
@@ -78,6 +79,7 @@ strong{
     color: #007bff !important;
     background-color: white !important;
     border-color:#D8D8D8 !important;
+    cursor: pointer;
 }
 
 .filter-stars{
@@ -122,4 +124,13 @@ body{
 
 .result-search{
     color: grey;
+}
+
+.fields-search{
+    border: 1px solid #D8D8D8 ;
+}
+
+.search{
+    padding-left: 15px;
+    padding-bottom: 10px;
 }
