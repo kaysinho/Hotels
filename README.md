@@ -1,7 +1,7 @@
 # Hotels
 Este proyecto se compone de dos partes: La primera es un backend hecho en node.js donde se expone un APIRest de hoteles, para ser consumida desde cualquier otra aplicacion. La segunda parte es una app desarrollada en Angular 5, donde se consume el API desarrollada en el punto anterior.
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: https://github.com/kaysinho/Hotels/blob/master/portada.png "Logo Title Text 2"
 
 
 # Instalaciones necesarias
