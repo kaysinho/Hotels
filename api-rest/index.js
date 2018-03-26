@@ -12,9 +12,9 @@ app.use(bodyParser.json())
 
 var corsOptions = {
     origin: 'http://localhost:4200',
-    optionsSuccessStatus: 200 
+    optionsSuccessStatus: 200
   }
-  
+
 app.locals.hotels = require('./data.json')
 
 const resp = {
@@ -25,9 +25,9 @@ const resp = {
 }
 
 /*Return All Hotels*/
-app.get('/api/hotels', cors(corsOptions), (request, response)=>{
+app.get('/api/v1/hotels', cors(corsOptions), (request, response)=>{
     let hotels = app.locals.hotels;
-    
+
     if (hotels.length==0){
         resp.status = 'error'
         resp.message ='not Hotels!'
@@ -40,24 +40,24 @@ app.get('/api/hotels', cors(corsOptions), (request, response)=>{
 })
 
 /*Return Hotel by Name*/
-app.get('/api/hotels/:name', cors(corsOptions), (request, response)=>{
+app.get('/api/v1/hotels/:name', cors(corsOptions), (request, response)=>{
 
     let name = request.params.name.toUpperCase()
     let hotels = app.locals.hotels.filter(hotel => hotel.name.toUpperCase().indexOf(name)>0)
     resp.params = request.params
-    
+
     if (hotels.length==0){
         resp.status = 'error'
         resp.message ='Hotel not exist!'
         resp.hotels = []
         return response.status(404).send(resp)
-    } 
+    }
 
     resp.status = 'success'
     resp.message = ''
     resp.hotels = hotels
 
-    response.status(200).send(resp)
+    return response.status(200).send(resp)
 })
 
 
