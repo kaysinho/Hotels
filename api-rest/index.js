@@ -31,7 +31,7 @@ app.get('/api/v1/hotels', cors(corsOptions), (request, response)=>{
     if (hotels.length==0){
         resp.status = 'error'
         resp.message ='not Hotels!'
-        return response.status(404).send(resp)
+        return response.status(200).send(resp)
     }
     resp.status = 'success'
     resp.message = ''
@@ -50,7 +50,7 @@ app.get('/api/v1/hotels/:name', cors(corsOptions), (request, response)=>{
         resp.status = 'error'
         resp.message ='Hotel not exist!'
         resp.hotels = []
-        return response.status(404).send(resp)
+        return response.status(200).send(resp)
     }
 
     resp.status = 'success'
